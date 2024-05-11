@@ -4,7 +4,7 @@ const mysql = require('mysql');
 const jwt = require('jsonwebtoken');
 const bodyParser = require('body-parser');
 const connection = require('./db/connect')
-const PORT = process.env.PORT || 5000
+const PORT = process.env.PORT
 const router = require('./routes/handler')
 
 
