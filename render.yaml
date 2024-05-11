@@ -1,0 +1,14 @@
+require('dotenv').config()
+services:
+  - type: web
+    name: user management 
+    env:
+      NODE_ENV: production
+      PORT: process.env.PORT
+      MYSQL_HOST: process.env.HOST
+      MYSQL_USER: process.env.USER
+      MYSQL_PASSWORD: process.env.PASSWORD
+      MYSQL_DATABASE: process.env.DATABASE
+    buildCommand: npm install
+    startCommand: npm run dev
+    healthCheckPath: /
